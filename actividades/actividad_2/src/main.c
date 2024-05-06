@@ -5,6 +5,9 @@
  * @brief Programa principal
 */
 int main(void) {
+	short v1, v2;
+	char oper;
+	float resultado;
 	// Inicializo el USB
     stdio_init_all();
 	// Demora para esperar la conexion
@@ -18,7 +21,34 @@ int main(void) {
 	printf("Un double ocupa %d bytes\n", sizeof(double));
 
     while (true) {
-
+    	puts ("el primer digito es");
+    	scanf ("%hd", &v1);
+    	fflush (stdin);
+    	puts ("el segundo digito es");
+    	scanf ("%hd", &v2);
+    	fflush (stdin);
+        puts ("que operacion quiere hacer:");
+        scanf ("%hd", &resultado);
+        fflush (stdin);
+    	scanf ("%c", &oper);
+    	fflush (stdin);
+        switch(oper){
+            break;
+          case('+'):
+            resultado =v1+v2;
+            break;
+          case('-'):
+            resultado = v1-v2;
+            break;
+          case('*'):
+            resultado = v1*v2;
+            break;
+          case('/'):
+            resultado = v1/v2;
+            break;
+        }
+                puts ("el resultado es");
+        printf("%f \n",resultado);
     }
     return 0;
-}
+}   
