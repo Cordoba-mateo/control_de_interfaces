@@ -13,7 +13,8 @@ int main(void) {
     gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);
 
 	// Mensaje por USB
-	printf("\nHola mundo!\n");
+	sleep_ms(2000);
+    printf("\nHola mundo!\n");
 
     while (true) {
     	// Prendo LED
